@@ -892,10 +892,10 @@ class ShadowCubeGenerator(tk.Tk):
             
 
     def generate_openscad_file(self, temp_scad):
-        cell_size = 3
-        border_thickness = 0.4
-        number_of_cells = 8
-        pocket_depth = 2
+        cell_size = self.preferences.get('cell_size', 3)
+        border_thickness = self.preferences.get('border_thickness', 0.4)
+        number_of_cells = self.grid_size
+        pocket_depth = self.preferences.get('pocket_depth', 2)
 
         def pocket(row, col):
             # First pocket
