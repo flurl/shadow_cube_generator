@@ -165,7 +165,7 @@ class ShadowCubeGenerator(tk.Tk):
         input_frame.pack(fill=tk.X, pady=(0, 10))
         
         # Create input field for grid size
-        self.input_label = ttk.Label(input_frame, text="Enter a number between 16 and 128:")
+        self.input_label = ttk.Label(input_frame, text="Enter a number between 8 and 64:")
         self.input_label.pack(side=tk.LEFT, padx=5)
         
         self.input_field = ttk.Entry(input_frame, width=10)
@@ -585,7 +585,7 @@ class ShadowCubeGenerator(tk.Tk):
     def generate_grid(self):
         try:
             self.grid_size = int(self.input_field.get())
-            if not 8 <= self.grid_size <= 128:
+            if not 8 <= self.grid_size <= 64:
                 raise ValueError
         except ValueError:
             self.input_field.delete(0, tk.END)
