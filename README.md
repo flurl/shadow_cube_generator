@@ -42,7 +42,7 @@ python cube_gen.py
 ```
 
 2. Create a new project:
-   - Enter a grid size (8-128)
+   - Enter a grid size (8-64)
    - Click "Generate Grid"
    - Design your shadow patterns in each view
 
